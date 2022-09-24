@@ -1,0 +1,91 @@
+/* ========================================== */
+/* Basics */
+/* ========================================== */
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.separator {
+  margin: 20px 0px;
+  height: 2px;
+  background-color: blue;
+}
+/* ========================================== */
+/* CSS Grid */
+/* ========================================== */
+
+.container {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: 50px auto 100px; */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-template-columns: repeat(3, 1fr); */
+
+  /* grid-template-rows: 100px 150px; */
+  gap: 4px;
+
+  grid-template: repeat(3, 50px) / repeat(12, 1fr); /* rows / columns */
+
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* # en auto; cols como minimo 100 px, maximo 1fr */
+
+  grid-template-areas:
+    "m m m h h h h h h h h h"
+    "m m m c c c c c c c c c"
+    "m m m f f f f f f f f f";
+  /*se define cada elemento-cell en esta grilla en cada clase asignándo la letra con 'grid-area: letra'"*/
+  /* En este caso 'm' 'h' 'f' y 'c' serán los tipos de grid-area, con estos pueden definirse rectangulos */
+}
+
+.header {
+  /* grid-column-start: 5; */
+  /* grid-column-end: -1; /*expand toda la row hasta el fin*/
+  /* Using the template-areas: */
+  grid-area: h;
+}
+
+.menu {
+  /* grid-column: span 4; */
+  /* grid-row: 1 / -1; */
+  grid-area: m;
+}
+
+.content {
+  /* grid-column: 5 / -1; */
+  grid-area: c;
+}
+
+.footer {
+  /* grid-column: 5 / -1; expand toda la row */
+  grid-area: f;
+}
+
+h2 {
+  font-variant: small-caps;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Grid-template-columns a partir de 600px</h1>
+    <h2 id="windowWidth">Hello</h2>
+
+    <main class="main-grid">
+        <article class="grid-col-span-2">
+            <h3>col-span-2</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+        </article>
+        <article>
+            <h3>Item</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+        </article>
+        <article class="grid-row-span-2">
+            <h3>row-span-2</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+        </article>
+        <article>
+            <h3>Some Title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+        </article>
+        <article class="grid-col-span-2">
+            <h3>col-span-2</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+            <h4>Some Footer</h4>
+        </article>
+        <article>
+            <h3>Some Title</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque suscipit est ut laborum maiores aliquam perspiciatis, voluptatum quam, earum iusto facilis molestias vitae voluptatem at.</p>
+        </article>
+    </main>
+    <hr>
+    <h1>Grid-template-areas</h1>
+    <section class="grid-with-template-areas">
+        <article class="item-areas">
+            <h3>grid-area: a</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+        <article class="item-areas">
+            <h3>grid-area: b</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+        <article class="item-areas">
+            <h3>grid-area: c</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+        <article class="item-areas">
+            <h3>grid-area: d</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+        <article class="item-areas">
+            <h3>grid-area: e</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+        <article class="item-areas">
+            <h3>grid-area: f</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, incidunt. Consequatur repellat maiores illo voluptas sed, beatae magnam ut? Omnis.</p>
+        </article>
+
+    </section>
+</body>
+
+<script>
+    let htmlWindowWidth = document.querySelector("#windowWidth")
+    htmlWindowWidth.textContent = `Window width: ${window.innerWidth} px`
+
+    window.addEventListener("resize", ()=>{htmlWindowWidth.textContent = `Window width: ${window.innerWidth} px`})
+</script>
+</html>

@@ -1,0 +1,65 @@
+/* ========================================== */
+/* Basics */
+/* ========================================== */
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+.separator {
+  margin: 20px 0px;
+  height: 2px;
+  background-color: blue;
+}
+/* ========================================== */
+/* CSS Grid */
+/* ========================================== */
+
+.container {
+  display: grid;
+  /*autofit mete # cuantas columnas pueda/entren. minmax(minimaColumna, maxColumna)*/
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  /*para que los rows se generen automaticamente y tengan misma altura*/
+  grid-auto-rows: 75px;
+  grid-auto-flow: dense; /*intenta rellenar para que no queden agujeros blancos*/
+  gap: 4px;
+}
+
+.horizontal {
+  background-color: blue !important;
+  grid-column: span 2;
+}
+.vertical {
+  background-color: red !important;
+  grid-row: span 2;
+}
+.big {
+  background-color: green !important;
+  grid-row: span 2;
+  grid-column: span 2;
+}

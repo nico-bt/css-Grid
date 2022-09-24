@@ -1,0 +1,101 @@
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  border-bottom: 4px double black;
+  /* border-style: double; */
+}
+h3{
+  font-variant: small-caps;
+  font-size: 1.25rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+/***********************************************************/
+/* BASIC GRID DEFINING COLUMNS --> grid-template-columns:  */
+/***********************************************************/
+.main-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 25px;
+}
+
+@media (min-width: 600px) {
+  .main-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+  .grid-row-span-2 {
+    grid-row: span 2;
+  }
+}
+
+article {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+hr {
+  margin: 50px 0;
+  border: 2px solid black;
+}
+
+/********************************************************/
+/* GRID TEMPLATE AREAS */
+/********************************************************/
+
+.grid-with-template-areas {
+  display: grid;
+  /* grid-auto-columns: 1fr; para que genere en auto todas las columnas del mismo size, sino autoajusta */
+  gap: 20px;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "c c"
+    "d d"
+    "e f";
+}
+
+/* Defining name*/
+/* Asigning each child the area name */
+.item-areas:nth-child(1) {
+  grid-area: a;
+}
+.item-areas:nth-child(2) {
+  grid-area: b;
+}
+.item-areas:nth-child(3) {
+  grid-area: c;
+}
+.item-areas:nth-child(4) {
+  grid-area: d;
+}
+.item-areas:nth-child(5) {
+  grid-area: e;
+}
+.item-areas:nth-child(6) {
+  grid-area: f;
+}
+
+/* Make a grid with the names */
+@media (min-width: 600px) {
+  .grid-with-template-areas {
+    grid-template-areas:
+      "a a b b"
+      "c c d d"
+      "e e f f";
+  }
+}
+@media (min-width: 800px) {
+  .grid-with-template-areas {
+    grid-template-areas:
+      "a a b e"
+      "c d d e"
+      "c f f f";
+  }
+}
